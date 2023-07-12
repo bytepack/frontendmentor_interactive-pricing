@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive pricing</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+  <script src="js/slider.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <section class="section-pricing">
+      <div class="section-pricing__heading-box u-margin-bottom-huge-2x">
+        <h1 class="heading-primary u-margin-bottom-medium">Simple, traffic based pricing</h1>
+        <p class="sub-heading-primary u-margin-bottom-small">Sign-up for our 30-day trial.</p>
+        <p class="sub-heading-primary">No credit card required.</p>
+        <img class="section-pricing__img" src="images/pattern-circles.svg" alt="Circles">
+      </div>
+
+      <div class="pricing">
+
+        <div class="pricing__view-box">
+          <h3 class="pricing__views">
+            <span data-view>100K</span><span> PAGEVIEWS</span>
+          </h3>
+          <input type="range" class="slider pricing__slider" aria-label="View Slider" min="1" max="5" value="3"
+            data-slider>
+          <h3 class="pricing__price">
+            <span class="pricing__price-value" data-price>$16.00</span>
+            <span class="pricing__timeframe"> / month</span>
+          </h3>
+        </div>
+
+        <div class="pricing__toggle-box">
+          <label class="lbl pricing__label pricing__label1">
+            <span class="lbl__main">Monthly Billing</span>
+          </label>
+          <div class="toggle pricing__toggle" tabindex="0">
+            <input class="toggle__checkbox" type="checkbox" tabindex="-1" data-checkbox>
+            <div class="toggle__overlay"></div>
+            <div class="toggle__circle"></div>
+          </div>
+          <label class="lbl pricing__label pricing__label2">
+            <span class="lbl__main">Yearly Billing</span>
+            <span class="lbl__sub">25% <span class="lbl__sub-desktop">discount</span></span>
+          </label>
+        </div>
+
+        <hr class="pricing__line">
+
+        <div class="pricing__bottom-box">
+          <ul>
+            <li>
+              <img src="images/icon-check.svg" alt="check">
+              <span class="">Unlimited websites</span>
+            </li>
+            <li>
+              <img src="images/icon-check.svg" alt="check">
+              <span class="">100% data ownership</span>
+            </li>
+            <li>
+              <img src="images/icon-check.svg" alt="check">
+              <span class="">Email reports</span>
+            </li>
+          </ul>
+          <a href="#" class="btn pricing__btn">Start my trial</a>
+        </div>
+
+
+      </div>
+    </section>
+  </main>
+
+
+</body>
+
+</html>

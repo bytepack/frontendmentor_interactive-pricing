@@ -1,0 +1,76 @@
+.toggle {
+  --circle-spacing: 0.5rem;
+  --circle-spacing-unitless: 0.5;
+  --width: 6.5rem;
+  --width-unitless: 6.5;
+  --circle-width: calc(var(--width) / 2.5 - var(--circle-spacing));
+  --circle-width-unitless: calc(
+    var(--width-unitless) / 2.5 - var(--circle-spacing-unitless)
+  );
+  --circle-height: var(--circle-width);
+  --height: calc(var(--circle-height) + 2 * var(--circle-spacing));
+
+  width: var(--width);
+  height: var(--height);
+  border-radius: 2000px;
+  overflow: hidden;
+  position: relative;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover .toggle__overlay {
+      background-color: $color-primary-1;
+    }
+  }
+
+  &__checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    opacity: 0;
+
+    &:checked ~ .toggle__circle {
+      transform: translate(
+        calc(
+          var(--circle-width) *
+            (
+              (var(--width-unitless) - 2 * var(--circle-spacing-unitless)) /
+                var(--circle-width-unitless)
+            ) - var(--circle-width)
+        ),
+        -50%
+      );
+    }
+
+    &:checked ~ .toggle__overlay {
+      background-color: $color-primary-2;
+    }
+  }
+
+  &__circle {
+    position: absolute;
+    top: 50%;
+    left: var(--circle-spacing);
+    height: var(--circle-height);
+    width: var(--circle-width);
+    transform: translate(0, -50%);
+    background-color: $color-light-1;
+    border-radius: 50%;
+    transition: transform 0.3s;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-grey-3;
+    transition: background-color 0.3s;
+  }
+
+}

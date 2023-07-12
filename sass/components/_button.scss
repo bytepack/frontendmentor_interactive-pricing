@@ -1,0 +1,17 @@
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 800;
+    background-color: $color-dark-1;
+    color: $color-primary-5;
+    padding: 1.4rem 3rem;
+    border-radius: 2000px;
+    transition: color 0.3s;
+
+    @media (hover: hover) and (pointer: fine){
+        &:hover{
+            color: $color-light-1;
+        }
+    }
+}

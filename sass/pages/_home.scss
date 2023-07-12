@@ -1,0 +1,29 @@
+.section-pricing {
+  background-image: url("../images/bg-pattern.svg");
+  background-size: cover;
+  background-position-y: -27rem;
+  background-repeat: no-repeat;
+  padding: 6rem 3rem;
+  display: flex;flex-direction: column;
+  gap: 5rem;
+
+  &__heading-box {
+    position: relative;
+    min-height: 15rem;
+    padding: 3rem 0;
+    text-align: center;
+
+    & > *:not(.section-pricing__img){
+      position: relative;
+      z-index: 1;;
+    }
+  }
+
+  &__img {
+    width: 15rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

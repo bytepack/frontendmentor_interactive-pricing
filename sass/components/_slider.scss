@@ -1,0 +1,130 @@
+// https://toughengineer.github.io/demo/slider-styler/slider-styler.html
+
+.slider {
+  height: 4.5rem;
+  -webkit-appearance: none;
+  appearance: none;
+
+  // progress support
+  --range: calc(var(--max) - var(--min));
+  --ratio: calc((var(--value) - var(--min)) / var(--range));
+  --sx: calc(0.5 * 4.5rem + var(--ratio) * (100% - 4.5rem));
+  --fill-lower: #{$color-primary-1};
+
+  // webkit
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    background-color: $color-primary-2;
+    background-image: url("../images/icon-slider.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border: none;
+    box-shadow: 0 1.5rem 1.5rem $color-primary-1;
+    margin-top: calc(1rem * 0.5 - 4.5rem * 0.5);
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #4be7d7;
+    }
+
+    &:active {
+      background-color: #4be7d7;
+    }
+  }
+
+  &::-webkit-slider-runnable-track {
+    height: 1rem;
+    border: none;
+    border-radius: 2000px;
+    box-shadow: none;
+    background: linear-gradient(var(--fill-lower), var(--fill-lower)) 0 /
+        var(--sx) 100% no-repeat,
+      $color-grey-2;
+  }
+
+  // mozilla
+  &::-moz-range-thumb {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    background-color: $color-primary-2;
+    background-image: url("../images/icon-slider.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border: none;
+    box-shadow: 0 1.5rem 1.5rem $color-primary-1;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s;
+
+    &::-moz-range-thumb:hover {
+      background-color: #4be7d7;
+    }
+
+    &::-moz-range-thumb:active {
+      background-color: #4be7d7;
+    }
+  }
+
+  &::-moz-range-track {
+    height: 1rem;
+    border: none;
+    border-radius: 2000px;
+    box-shadow: none;
+    background: linear-gradient(var(--fill-lower), var(--fill-lower)) 0 /
+        var(--sx) 100% no-repeat,
+      $color-grey-2;
+  }
+
+  // ms
+  &::-ms-fill-upper {
+    background: transparent;
+    border-color: transparent;
+  }
+
+  &::-ms-fill-lower {
+    border-color: transparent;
+    height: 1rem;
+    border-radius: 2000px 0 0 2000px;
+    background: var(--fill-lower);
+    border: none;
+    border-right-width: 0;
+  }
+
+  &::-ms-thumb {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    background-color: $color-primary-2;
+    background-image: url("../images/icon-slider.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border: none;
+    box-shadow: 0 1.5rem 1.5rem $color-primary-1;
+    margin-top: 0;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #4be7d7;
+    }
+
+    &:active {
+      background-color: #4be7d7;
+    }
+  }
+
+  .slider::-ms-track {
+    height: 1rem;
+    border-radius: 2000px;
+    background-color: $color-grey-2;
+    border: none;
+    box-shadow: none;
+  }
+}

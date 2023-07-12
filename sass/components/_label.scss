@@ -1,0 +1,24 @@
+.lbl {
+  font-size: 1.4rem;
+  font-weight: 600;
+
+  &__main {
+    color: $color-grey-1;
+  }
+
+  &__sub {
+    font-size: 1.2rem;
+    color: $color-primary-4;
+    background-color: $color-primary-3;
+    padding: 0.2em 0.8em;
+    border-radius: 1000px;
+  }
+
+  &__sub-desktop{
+    display: none;
+
+    @media (min-width: 62em){
+      display: initial;
+    }
+  }
+}

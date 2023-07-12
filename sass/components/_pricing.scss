@@ -1,0 +1,153 @@
+.pricing {
+  background-color: $color-light-1;
+  box-shadow: 0 0.5rem 1rem rgba($color-grey-1, 0.5);
+  border-radius: 1rem;
+  // width: 100%;
+  max-width: 60rem;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+  @media (min-width: 37.5em) {
+    padding: 5rem 0;
+  }
+
+  & > *:not(&__line) {
+    padding-right: 3rem;
+    padding-left: 3rem;
+
+    @media (min-width: 37.5em) {
+      padding-right: 5rem;
+      padding-left: 5rem;
+    }
+  }
+
+  &__view-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @media (min-width: 37.5em) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__views {
+    word-spacing: 0.5rem;
+    letter-spacing: 0.3rem;
+    color: rgba($color-dark-1, 0.8);
+  }
+
+  &__price-value{
+    color: $color-dark-1;
+    font-weight: 800;
+    font-size: 3rem;
+  }
+
+  &__timeframe {
+    font-weight: 600;
+    padding-left: 1rem;
+  }
+
+  &__slider {
+    @media (min-width: 37.5em) {
+      order: 1;
+      flex-basis: 100%;
+    }
+  }
+
+  &__toggle-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    position: relative;
+
+    @media (max-width: 21.87em) {
+      flex-direction: column;
+    }
+
+    @media (min-width: 37.5em) {
+      padding-bottom: 3rem;
+    }
+  }
+
+  &__toggle {
+    @media (min-width: 37.5em) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__label {
+    flex-basis: 0;
+
+    @media (min-width: 37.5em) {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+  }
+  &__label2 {
+    @media (min-width: 37.5em) {
+      left: calc(50% + 3.5rem + 2rem);
+    }
+  }
+
+  &__label1 {
+    @media (min-width: 37.5em) {
+      right: calc(50% + 3.5rem + 2rem);
+    }
+  }
+
+  &__line {
+    background-color: $color-grey-2;
+    height: 0.2rem;
+    border: none;
+  }
+
+  &__bottom-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+
+    @media (min-width: 37.5em) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  ul {
+    list-style: none;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      gap: 2rem;
+    }
+
+    img {
+      width: 1.2rem;
+    }
+  }
+
+  &__btn {
+    min-width: 45%;
+  }
+
+}

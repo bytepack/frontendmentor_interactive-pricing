@@ -1,0 +1,16 @@
+{
+  "name": "frontendmentor_interactive-pricing",
+  "version": "1.0.0",
+  "description": "![Design preview for the Interactive pricing component coding challenge](./design/desktop-preview.jpg)",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss css/style.css -w"
+  },
+  "devDependencies": {
+    "sass": "^1.63.6",
+    "stylelint": "^15.10.1",
+    "stylelint-config-standard-scss": "^10.0.0"
+  }
+}
